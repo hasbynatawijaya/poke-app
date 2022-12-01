@@ -24,7 +24,7 @@ const PokeListPage = () => {
 
   if (status === "loading") {
     return (
-      <div className="w-full relative h-full">
+      <div data-testid="loader" className="w-full relative h-full">
         <Loader />
       </div>
     );
@@ -32,7 +32,10 @@ const PokeListPage = () => {
 
   return (
     <>
-      <div className="grid gap-6 grid-rows-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div
+        data-testid="poke-list-card"
+        className="grid gap-6 grid-rows-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+      >
         {data?.pages.map((page) =>
           page.results.map(({ name, url }) => (
             <Card key={url} title={name} imageURL={url} />
