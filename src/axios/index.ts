@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { POKE_BASE_URL } from "../constants";
+import { POKE_BASE_URL } from "@/constants/index";
 
 export const axiosInstance = axios.create({
   baseURL: POKE_BASE_URL,
