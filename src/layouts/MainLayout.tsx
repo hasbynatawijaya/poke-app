@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 
 const MainLayout = () => {
   return (
-    <div className="h-screen bg-[url('@/assets/background-image.png')] overflow-auto p-6">
+    <div className="h-screen bg-[url('@/assets/background-image.png')] bg-cover overflow-auto p-6">
       <div className="container m-auto">
         <Header />
         <Outlet />
